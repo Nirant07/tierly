@@ -1,0 +1,55 @@
+
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#f5f7fb;background:#080a0f;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px;background:radial-gradient(circle at 50% -10%,#20263a 0,#0b0d12 38%,#080a0f 70%);min-height:100vh}
+button,input{font:inherit}
+button{cursor:pointer}
+.app{min-height:100vh}
+.topbar{height:70px;border-bottom:1px solid #20242e;background:rgba(8,10,15,.76);backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,56px);position:sticky;top:0;z-index:20}
+.brand{display:flex;gap:10px;align-items:center;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:21px}
+.brand-mark{width:32px;height:32px;display:grid;place-items:center;border-radius:9px;background:#fff;color:#0b0d12}
+.top-actions{display:flex;gap:9px}
+.ghost,.export,.control-btn{border:1px solid #2a2f3a;background:#12151c;color:#dfe3eb;border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:8px}
+.export{background:#f3f5f8;color:#0b0d12;border-color:#f3f5f8;font-weight:700;box-shadow:0 5px 18px rgba(0,0,0,.16)}
+.workspace{width:min(1180px,calc(100% - 32px));margin:auto;padding:62px 0 50px}
+.hero{text-align:center;margin-bottom:34px}
+.eyebrow{font-size:11px;letter-spacing:.2em;color:#7e8798;font-weight:700;margin-bottom:13px}
+.title-input{display:block;margin:auto;width:min(800px,100%);background:transparent;border:0;outline:0;color:#fff;text-align:center;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(32px,5vw,58px);letter-spacing:-.04em}
+.title-input::placeholder{color:#f5f7fb;opacity:.92}.title-input:focus{text-decoration:underline;text-decoration-color:#394052;text-underline-offset:8px}
+.hero p{color:#8991a0;margin:12px 0 0;font-size:15px}
+.settings-panel{display:flex;align-items:center;justify-content:space-between;background:#10131a;border:1px solid #252a34;border-radius:14px;padding:15px 17px;margin-bottom:18px}
+.settings-panel div{display:flex;flex-direction:column;gap:3px}.settings-panel span{font-size:12px;color:#7e8795}
+.settings-panel button{background:none;border:1px solid #3b414e;color:#ddd;border-radius:8px;padding:8px 11px}
+.board-export{background:#0d1016;border:1px solid #292e39;border-radius:16px;overflow:hidden;box-shadow:0 20px 70px rgba(0,0,0,.25)}
+.board-header{padding:14px 16px;border-bottom:1px solid #252a34;background:#11141b;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.board-title{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:18px;font-weight:700}.board-add-tier{border:1px solid #303744;background:#191d26;color:#e7eaf0;border-radius:9px;padding:8px 12px;display:flex;align-items:center;gap:6px;font-weight:600}.board-add-tier:hover{background:#222833}
+.tier-row{display:flex;min-height:116px;align-items:stretch;border-bottom:1px solid #202530}
+.tier-label{width:var(--tier-label-width,112px);flex:0 0 var(--tier-label-width,112px);min-height:116px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+.label-text{background:none;border:0;color:inherit;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:25px;max-width:100%;padding:0 8px;white-space:normal;overflow-wrap:anywhere;line-height:1.05}
+.label-actions{display:flex;gap:3px;margin-top:8px;opacity:.45}.tier-label:hover .label-actions{opacity:1}
+.label-actions button{border:0;background:rgba(0,0,0,.16);color:inherit;border-radius:5px;padding:4px;display:grid;place-items:center}
+.tier-content{flex:1;min-width:0;padding:8px;display:flex;align-items:center;align-content:center;gap:7px;flex-wrap:wrap;background:#10131a;transition:background .15s}
+.tier-content.is-over,.unranked.is-over{background:#181d28}
+.tier-placeholder{color:#515968;font-size:13px;margin:auto}
+.unranked{padding:17px 18px 22px;background:#0c0f15;min-height:148px;transition:background .15s}.unranked.file-over{background:#151b27;box-shadow:inset 0 0 0 1px #58667d}
+.unranked-head{margin-bottom:12px}.unranked-title{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;color:#9098a7}.count{font-size:11px;color:#555e6e;margin-left:8px}
+.item-grid{display:flex;flex-wrap:wrap;gap:8px;min-height:90px;align-content:flex-start}
+.empty-unranked{width:100%;height:88px;border:1px dashed #303644;border-radius:10px;display:grid;place-items:center;color:#4e5767;font-size:13px;pointer-events:none}.unranked.file-over .empty-unranked{border-color:#778399;color:#b9c1cf;background:#111722}
+.item{width:92px;height:92px;border-radius:9px;overflow:hidden;position:relative;background:#191d26;border:1px solid #2a303c;touch-action:none;user-select:none;cursor:grab;box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.item:active{cursor:grabbing}.item img{width:100%;height:100%;display:block;object-fit:cover}.item.dragging{opacity:.25}
+.remove-item{position:absolute;right:4px;top:4px;z-index:10;pointer-events:auto;width:23px;height:23px;border:0;border-radius:7px;background:rgba(5,7,10,.75);color:#fff;display:grid;place-items:center;opacity:0}.item:hover .remove-item{opacity:1}
+.controls{display:flex;justify-content:center;gap:10px;margin:20px 0}.control-btn{background:#11151d}
+.drop-upload{border:1px dashed #343b49;border-radius:14px;padding:23px;display:flex;align-items:center;justify-content:center;gap:10px;flex-direction:column;color:#9aa2b0;background:rgba(13,16,22,.5);cursor:pointer;transition:.15s}
+.drop-upload:hover{border-color:#5a6374;background:#11151a}.drop-upload strong{color:#dce0e8;font-size:14px}.drop-upload span{font-size:12px;color:#697282}
+.drag-preview{width:110px;height:110px;border-radius:10px;overflow:hidden;box-shadow:0 15px 40px #000;transform:rotate(2deg);border:1px solid #fff}.drag-preview img{width:100%;height:100%;object-fit:cover}
+footer{text-align:center;color:#454d5b;font-size:11px;padding:0 20px 28px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(6px);display:grid;place-items:center;z-index:50;padding:20px}
+.modal{width:min(420px,100%);background:#11151d;border:1px solid #303642;border-radius:16px;padding:21px;box-shadow:0 30px 100px #000}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px}.modal-head h2{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin:0;font-size:20px}.modal-head p{margin:5px 0;color:#737d8e;font-size:12px}.modal-head>button{background:none;border:0;color:#9aa3b1}
+.modal label{display:block;color:#9aa3b8;font-size:12px;font-weight:600;margin-bottom:18px}.modal label input{display:block;width:100%;margin-top:8px;background:#0b0e14;border:1px solid #303642;color:#fff;border-radius:9px;padding:11px 12px;outline:0}.modal label input:focus{border-color:#687386}
+.color-picker{display:flex;flex-wrap:wrap;gap:9px;margin-top:10px}.color-picker button{width:32px;height:32px;border:3px solid transparent;border-radius:9px}.color-picker button.selected{border-color:#fff;box-shadow:0 0 0 2px #0b0e14}
+.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:24px}
+@media(max-width:700px){
+ .workspace{width:calc(100% - 18px);padding-top:36px}.topbar{padding:0 12px}.top-actions .ghost{font-size:0;padding:9px}.top-actions .ghost svg{margin:0}.tier-label{width:min(var(--tier-label-width,112px),180px);flex-basis:min(var(--tier-label-width,112px),180px)}.item{width:70px;height:70px}.tier-row{min-height:90px}.unranked{padding:12px}.board-export{border-radius:12px}.title-input{font-size:34px}.hero p{font-size:13px}
+}
+@media(max-width:430px){.item{width:62px;height:62px}.tier-label{width:min(var(--tier-label-width,112px),130px);flex-basis:min(var(--tier-label-width,112px),130px)}.label-text{font-size:20px}.label-actions{margin-top:5px}.drop-upload{padding:18px}}
